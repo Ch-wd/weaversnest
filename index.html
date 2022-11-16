@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weaver Nest- Handmade Crochet Products</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<meta name="viewport" content="width = device-width height = device-height initial-scale = 1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+	<link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
+
+</head>
+<body>
+	<div class = "mandala-overlay">
+		<img src="img/mandala.png">
+	</div>
+	<div class = "main-page-container">
+		<div class = "background-texture">
+		
+		</div>
+		<svg height="100%" width="100%" class = "back-circle">
+		  <circle cx="85%" cy="30%" r="40%" stroke="black" stroke-width="0" fill="#fffbd6" class = "svg-circle"/>
+		</svg>
+		<div class = "logo">
+			<img src="img/logo.png">
+		</div>
+		<div class = "main-title full-title">
+			Weaver's</br>Nest
+		</div>
+		<div class = "nav-bar">
+			<ul class = "nav-list">
+				<a href="#" class = "list-items"><li>home</li></a>
+				<a href="#" class = "list-items"><li>about</li></a>
+				<a href="products-1.html" class = "list-items"><li>products</li></a>
+				<a href="#" class = "list-items"><li>blog</li></a>
+				<a href="#" class = "list-items"><li>workshops</li></a>
+			</ul>
+		</div>
+		<div class = "main-content">
+			<h1>
+				Handmade</br>Products
+			</h1>
+			Sharing love & warmth...
+		</div>
+		<div class = "scroll-logo">
+			<a href="#page-2"><img src="img/scroll_gif.gif"></a>
+		</div>
+	</div>
+	<div class = "main-page-container" id ="page-2">
+		<div class = "background-texture">
+		
+		</div>
+		<div class = "page-title">
+			<h2>Recent Collections</h2>
+		</div>
+		<div class = "carousel-container" tabindex = "0" >
+			<div class = "carousel-division end-division">
+				<img class = "carousel-image" src="img/product1.jpg">
+			</div>
+			<div class = "carousel-division">
+				<img class = "carousel-image" src="img/product2.jpg">
+			</div>
+			<div class = "carousel-division main-division">
+				<img class = "carousel-image main-image" src="img/product3.jpg">
+				<div class = " button button-left" onclick="gotonext(1)">
+					<img src="img/arrow-left.png">
+				</div>
+				<div class = "button button-right" onclick="gotonext(0)">
+					<img src="img/arrow-right.png">
+				</div>
+				<div class = "description">
+					Amigurumi Dolls
+				</div>
+			</div>
+			<div class = "carousel-division">
+				<img class = "carousel-image" src="img/product4.jpg">
+			</div>
+			<div class = "carousel-division end-division">
+				<img class = "carousel-image" src="img/product5.jpg">
+			</div>
+		</div>
+	</div>
+	<div class = "footer">
+		
+	</div>
+	<script type="text/javascript">
+
+
+		window.addEventListener("load",function() {
+   		 // gotonext(1);
+  		  myTimer = setInterval(function(){gotonext(0)}, 4000);
+		})
+		imgs = document.querySelectorAll(".carousel-image");
+		var winHeight = $(window).height();
+		var footer_ = document.querySelector(".footer");
+		j = 0;
+		var isVisible;
+		// const descr=[ "Amigurimi Dolls" ,"crochet bag","Crochet bag" , "Crochet Beanie" ,"Mandala Crochet" ];
+		const descr=["Amigurumi Dolls" , "Mandala Crochet" , "Crochet Beanie" , "crochet bag" , "crochet bag"];
+		var docHeight = $(document).height();
+		var mandala_rotator = document.querySelector(".mandala-overlay img");
+		var main_title = document.querySelector(".main-title");
+		const images=["img/product1.jpg" , "img/product2.jpg" , "img/product3.jpg" , "img/product4.jpg","img/product5.jpg"];
+		var back_circle = document.querySelector(".svg-circle");
+		var conts = document.querySelector(".description");
+		$(window).scroll(function rotate_mandala(){
+			scrollTop = $(window).scrollTop();
+			scrollPercentage = scrollTop/(docHeight - winHeight) * 100;
+			// console.log(scrollPercentage);
+			mandala_rotator.style.rotate=(scrollPercentage ) + "deg";
+			if(scrollTop>(winHeight/2)){
+				main_title.classList.add("compressed-title");
+				main_title.classList.remove("full-title");
+				back_circle.setAttribute('cx','95%');
+				back_circle.setAttribute('cy','5%');
+				back_circle.setAttribute('r','15%');
+				mandala_rotator.style.opacity = "60%";
+			}
+			else{
+				main_title.classList.remove("compressed-title");
+				main_title.classList.add("full-title");	
+				back_circle.setAttribute('cx','85%');
+				back_circle.setAttribute('cy','30%');
+				back_circle.setAttribute('r','40%');
+				mandala_rotator.style.opacity = "100%";			
+			}
+			isVisible = footer_.getBoundingClientRect();
+			if(isVisible.top < (winHeight ))
+			{
+				// console.log(isVisible.top);
+				mandala_rotator.style.opacity = "100%";
+			}
+		})
+		function gotonext(x){
+			// console.log($(ea.code));
+			// console.log(x);
+			if(x == 1){
+				j++;
+				for (var i = 0; i < 5; i++) {
+					imgs[i].src = images[Math.abs((j+i)%5)];
+					// conts[i].textContent = descr[Math.abs((j+i)%5)];		
+				}
+
+
+			}
+			else{
+				j--;
+				for (var i = 0; i < 5; i++) {
+					imgs[i].src = images[Math.abs((j+i)%5)];
+					// conts[i].textContent = descr[Math.abs((j+i)%5)];
+				}
+			}
+			if(j<0)
+			{
+				j=j+5;
+			}
+
+			// j = Math.abs(j%5);
+			console.log(j);
+			conts.textContent = descr[Math.abs(j%5)];
+			// clearTimeout(myTimer);
+			// setTimeout(gotonext(1),5000);
+		}
+
+	</script>
+</body>
+</html>
