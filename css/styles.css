@@ -16,6 +16,7 @@ a{
 	--brown: #8a6646;
 	--violet: #551a8b;
 	--biege:#fffbd6;
+	--biege-contrast:#e3dda8;
 }
 html{
 	width: 100%;
@@ -27,6 +28,20 @@ body{
 	height: 100%;
 	min-height: 600px;
 	position: relative;
+}
+h3{
+	font-size: 2.2vw;
+	text-align: center;
+	font-family: 'Delius' , cursive;
+
+}
+h4{
+	font-size: 2vw;
+	font-family: 'Delius' , cursive;	
+}
+h5{
+	font-size: 1.8vw;
+	font-family: 'Delius' , cursive;
 }
 
 .background-texture{
@@ -53,6 +68,7 @@ h1{
 	overflow: hidden;
 	left: -20%;
 	filter: drop-shadow(1px -1px 10px black);
+	z-index: 2;
 }
 
 h2{
@@ -137,6 +153,10 @@ h2{
 	/*font-family: 'Delius', cursive;*/
 
 	font-size: 2.5vw;
+}
+
+.list-items li:hover{
+	color: var(--brown);
 }
 
 .drop-down-container{
@@ -346,6 +366,10 @@ h2{
 	/*justify-content: center;*/
 }
 
+.title-page-2{
+	font-size: 3vw;
+}
+
 .product-title-container h2{
 	font-size:4vw;
 	text-align: center;
@@ -415,3 +439,67 @@ h2{
 	background-position: center;
 	filter: drop-shadow(2px 2px 2px grey);
 }
+
+.intro-video-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.intro-video-title{
+	margin-top: 3%;
+}
+.intro-video{
+	margin: 3%;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+}
+
+.intro-video img{
+	width: 70%;
+}
+
+.course-title{
+	width: 100%;
+	background-color: var(--biege);
+	cursor: pointer;
+}
+.course-title h4{
+	padding: 20px;
+	box-shadow: 0px 10px 2px 0px var(--biege-contrast);
+	margin-top: 10px;
+}
+
+.course-detail-container{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	background-color: var(--biege-contrast);
+	/*height: 0px;*/
+	max-height: 0px;
+	overflow: hidden;
+	transition: all 1s;
+	/*box-sizing: content-box;*/
+	box-shadow: 0px 10px 2px 0px var(--biege-contrast);
+
+}
+
+.course-detail{
+	width: 30%;
+	padding-left: 20px;
+	font-size: 1.6vw;
+
+}
+
+.course-detail ul{
+	padding-left: 20px;
+}
+.course-detail-image{
+	width: 40%;
+}
+.course-detail-image img{
+	width: 60%;
+}
+
