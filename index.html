@@ -35,7 +35,16 @@
 			<ul class = "nav-list">
 				<a href="#" class = "list-items"><li>home</li></a>
 				<a href="#" class = "list-items"><li>about</li></a>
-				<a href="products-1.html" class = "list-items"><li>products</li></a>
+				<div class = "list-items"><li  onmouseover="displayDropDown()" onmouseout="hideDropDown()">products
+					<div class = "drop-down-container">
+						<ul class = "drop-down">
+							<a href="prod-accessories.html" class = "drop-list-item"><li>Accesories</li></a>
+							<a href="prod-babyprods.html" class = "drop-list-item"><li>Baby Products</li></a>
+							<a href="prod-jewelry.html" class = "drop-list-item"><li>Jewelry</li></a>
+							<a href="prod-macrame.html" class = "drop-list-item"><li>Macrame</li></a>
+							<a href="prod-toys.html" class = "drop-list-item"><li>Toys</li></a>
+						</ul>
+					</div></li></div>
 				<a href="#" class = "list-items"><li>blog</li></a>
 				<a href="#" class = "list-items"><li>workshops</li></a>
 			</ul>
@@ -165,7 +174,7 @@
 			// clearTimeout(myTimer);
 			// setTimeout(gotonext(1),5000);
 		}
-
 	</script>
+	<script src="js/commonscripts.js"></script>
 </body>
 </html>
