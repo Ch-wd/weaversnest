@@ -8,6 +8,7 @@ html{
 }
 a{
 	color: unset;
+	text-decoration: none;
 }
 
 :root{
@@ -503,3 +504,37 @@ h2{
 	width: 60%;
 }
 
+.profile{
+	right: 8%;
+}
+
+
+.main-content-page-2{
+	width: 50%;
+	font-family: 'Delius', cursive;
+	position: absolute;
+	top:25%;
+	/*left: 20%;*/
+	text-align: center;
+	font-size: 2vw;
+	color: var(--violet);
+	padding-left: 10px;
+}
+
+.button{
+	/*width: 60%;*/
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+.button p{
+	cursor: pointer;
+	padding: 5px;
+	background-color: var(--biege);
+	box-shadow: 2px 2px 2px 2px var(--biege-contrast), -2px -2px 2px 2px var(--biege-contrast);
+}
+
+.button p:hover{
+	color: var(--brown);
+}

@@ -20,7 +20,7 @@
 			<div class = "nav-bar">
 				<ul class = "nav-list">
 					<a href="index.html" class = "list-items"><li>home</li></a>
-					<a href="#" class = "list-items"><li>about</li></a>
+					<a href="about.html" class = "list-items"><li>about</li></a>
 					<div class = "list-items"><li  onmouseover="displayDropDown()" onmouseout="hideDropDown()">products
 						<div class = "drop-down-container">
 							<ul class = "drop-down">
@@ -212,6 +212,7 @@
 						courseDetail[e].style.maxHeight = "800px";
 						courseDetail[e].style.paddingTop = "20px";
 						courseVisible[e] = 1;
+						courseDetail[e].scrollIntoView(true);
 					}
 					else{
 						courseDetail[e].style.maxHeight = "0px";
