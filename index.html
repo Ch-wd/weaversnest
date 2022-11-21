@@ -14,7 +14,8 @@
 	<link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
 
 </head>
-<body>
+
+<body onload = "loading()">
 	<div class = "mandala-overlay">
 		<img src="img/mandala.png">
 	</div>
@@ -66,7 +67,7 @@
 		<div class = "page-title">
 			<h2>Recent Collections</h2>
 		</div>
-		<div class = "carousel-container" tabindex = "0" >
+		<div class = "carousel-container"  >
 			<div class = "carousel-division end-division">
 				<img class = "carousel-image" src="img/product1.jpg">
 			</div>
@@ -173,6 +174,10 @@
 			conts.textContent = descr[Math.abs(j%5)];
 			// clearTimeout(myTimer);
 			// setTimeout(gotonext(1),5000);
+		}
+
+		function loading(){
+			document.querySelector("body").style.display = "block";
 		}
 	</script>
 	<script src="js/commonscripts.js"></script>
