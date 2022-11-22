@@ -149,7 +149,7 @@
 			scrollPercentage = scrollTop/(docHeight - winHeight) * 100;
 			// console.log(scrollPercentage);
 			mandala_rotator.style.rotate=(scrollPercentage ) + "deg";
-			if(scrollTop>(winHeight/3)){
+			if(scrollTop>(winHeight/2.5)){
 				main_title.classList.add("compressed-title");
 				main_title.classList.remove("full-title");
 				back_circle.setAttribute('cx','95%');
