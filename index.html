@@ -100,7 +100,29 @@
 		</div>
 	</div>
 	<div class = "footer">
-		
+		<div class = "footer-nav-bar">
+			<ul class = "footer-nav-list">
+				<a href="#"><li>Home</li></a>
+				<a href="about.html"><li>About</li></a>
+				<a href="products.html"><li>Products</li></a>
+				<a href="blog.html"><li>Blogs</li></a>
+				<a href="workshop.html"><li>Workshops</li></a>
+			</ul>
+		</div>
+		<div class = "footer-title">
+			<a href="#">
+			<!-- Weaver's</br>Nest -->
+			<img src="img/title-single.png">
+			</a>
+		</div>
+		<div class = "footer-contact">
+			<div class = "mail">
+				
+			</div>
+			<div class = "phone">
+				
+			</div>
+		</div>
 	</div>
 	<script type="text/javascript">
 
@@ -127,7 +149,7 @@
 			scrollPercentage = scrollTop/(docHeight - winHeight) * 100;
 			// console.log(scrollPercentage);
 			mandala_rotator.style.rotate=(scrollPercentage ) + "deg";
-			if(scrollTop>(winHeight/2)){
+			if(scrollTop>(winHeight/3)){
 				main_title.classList.add("compressed-title");
 				main_title.classList.remove("full-title");
 				back_circle.setAttribute('cx','95%');

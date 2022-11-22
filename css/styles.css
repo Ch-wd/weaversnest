@@ -212,6 +212,8 @@ h2{
 }
 
 .back-circle{
+	pointer-events: none;
+
 	position: fixed;
 	z-index: -1;
 
@@ -219,6 +221,8 @@ h2{
 
 .svg-circle{
 	transition: all 1s;
+	pointer-events: none;
+
 }
 
 .main-content h1{
@@ -266,7 +270,7 @@ h2{
 	/*z-index:-2;*/
 	justify-content: center;
 	align-items: center;
-	tabindex:0;
+	/*tabindex:0;*/
 }
 
 .carousel-division{
@@ -360,11 +364,13 @@ h2{
 }
 
 .footer{
+	display: flex;
 	width: 100%;
 	height:20%;
 	background-color: #ffef6bba;
-	z-index: 9999;
+	z-index: 9999999;
 	clear: both;
+	justify-content: space-between;
 }
 
 .svg-circle{
@@ -426,6 +432,7 @@ h2{
 	/*border: 1px solid black;*/
 	box-sizing: border-box;
 	align-items: center;
+	/*justify-content: center;*/
 	/*justify-content: center;*/
 }
 
@@ -490,7 +497,7 @@ h2{
 	height:10%;
 }
 .top{
-	margin-top: 10%;
+	margin-top: 42%;
 	background: url("../img/title-border-top.png");
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -626,4 +633,50 @@ h2{
 	width:100%;
 	padding-top: 10%;
 	text-align: center;
+}
+
+.footer-nav-list{
+	list-style: none;
+	display: inline-block;
+	color: var(--orange);
+}
+
+.footer-nav-list li:hover{
+	color: var(--green);
+}
+
+.footer-nav-bar{
+	padding-top: 15px;
+	display: inline-block;
+	float: left;
+	margin-left: 30%;
+	font-size: 1.5vw;
+	z-index: 999;
+}
+
+.page-2{
+	margin-left: 5%;
+}
+
+.footer-title{
+	width: 30%;
+}
+
+.footer-title img{
+	width: 80%;
+}
+
+.footer-contact{
+	padding-top: 15px;
+	color: var(--orange);
+	font-size: 1.5vw;
+}
+.mail::after{
+	width: 20%;
+	content: "Mail: aaa@bbb.com"
+}
+
+.phone::after{
+	width: 20%;
+	content: "Call: 987654321";
 }
