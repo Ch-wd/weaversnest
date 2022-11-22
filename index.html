@@ -11,50 +11,54 @@
 	<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Boogaloo&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
 	<link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
 
 </head>
 
 <body> 
 	<div class = "mandala-overlay">
-		<img src="img/mandala.png">
+		<img src="img/mandala_temp.png">
 	</div>
 	<div class = "main-page-container" style="z-index: 1">
 		<div class = "background-texture">
 		
 		</div>
 		<svg height="100%" width="100%" class = "back-circle">
-		  <circle cx="85%" cy="30%" r="40%" stroke="black" stroke-width="0" fill="#fffbd6" class = "svg-circle"/>
+		  <circle cx="85%" cy="30%" r="40%" stroke="black" stroke-width="0" fill="#ffef6b" class = "svg-circle"/>
 		</svg>
 		<div class = "logo">
 			<img src="img/logo.png">
 		</div>
 		<a href="#"><div class = "main-title full-title">
-			Weaver's</br>Nest
+			<!-- Weaver's</br>Nest -->
+			<img src="img/title.png">
 		</div></a>
 		<div class = "nav-bar">
 			<ul class = "nav-list">
-				<a href="#" class = "list-items"><li>home</li></a>
-				<a href="about.html" class = "list-items"><li>about</li></a>
-				<div class = "list-items"><li  onmouseover="displayDropDown()" onmouseout="hideDropDown()"><a href = "products.html">products</a>
+				<a href="#" class = "list-items"><li>Home</li></a>
+				<a href="about.html" class = "list-items"><li>About</li></a>
+				<div class = "list-items"><li  onmouseover="displayDropDown()" onmouseout="hideDropDown()"><a href = "products.html">Products</a>
 					<div class = "drop-down-container">
 						<ul class = "drop-down">
 							<a href="prod-accessories.html" class = "drop-list-item"><li>Accesories</li></a>
 							<a href="prod-babyprods.html" class = "drop-list-item"><li>Baby Products</li></a>
-							<a href="prod-jewelry.html" class = "drop-list-item"><li>Jewelry</li></a>
+							<!-- <a href="prod-jewelry.html" class = "drop-list-item"><li>Jewelry</li></a> -->
 							<a href="prod-macrame.html" class = "drop-list-item"><li>Macrame</li></a>
 							<a href="prod-toys.html" class = "drop-list-item"><li>Toys</li></a>
 						</ul>
 					</div></li></div>
-				<a href="#" class = "list-items"><li>blog</li></a>
-				<a href="workshop.html" class = "list-items"><li>workshops</li></a>
+				<a href="blog.html" class = "list-items"><li>Blog</li></a>
+				<a href="workshop.html" class = "list-items"><li>Workshops</li></a>
 			</ul>
 		</div>
 		<div class = "main-content">
 			<h1>
-				Handmade</br>Products
+				Handmade</br>Crochet Products
 			</h1>
-			Sharing love & warmth...
+			...Made with bundles of yarn and love...
 		</div>
 		<div class = "scroll-logo">
 			<a href="#page-2"><img src="img/scroll_gif.gif"></a>
@@ -77,7 +81,8 @@
 			<div class = "carousel-division main-division">
 				<img class = "carousel-image main-image" src="img/product3.jpg">
 				<div class = " button button-left" onclick="gotonext(1)">
-					<img src="img/arrow-left.png">
+					<img fill = "currentColor" src="img/arrow-left.png">
+
 				</div>
 				<div class = "button button-right" onclick="gotonext(0)">
 					<img src="img/arrow-right.png">
@@ -128,7 +133,7 @@
 				back_circle.setAttribute('cx','95%');
 				back_circle.setAttribute('cy','5%');
 				back_circle.setAttribute('r','15%');
-				mandala_rotator.style.opacity = "60%";
+				// mandala_rotator.style.opacity = "60%";
 			}
 			else{
 				main_title.classList.remove("compressed-title");
@@ -136,13 +141,13 @@
 				back_circle.setAttribute('cx','85%');
 				back_circle.setAttribute('cy','30%');
 				back_circle.setAttribute('r','40%');
-				mandala_rotator.style.opacity = "100%";			
+				// mandala_rotator.style.opacity = "100%";			
 			}
 			isVisible = footer_.getBoundingClientRect();
 			if(isVisible.top < (winHeight ))
 			{
 				// console.log(isVisible.top);
-				mandala_rotator.style.opacity = "100%";
+				// mandala_rotator.style.opacity = "100%";
 			}
 		})
 		function gotonext(x){
@@ -170,7 +175,7 @@
 			}
 
 			// j = Math.abs(j%5);
-			console.log(j);
+			// console.log(j);
 			conts.textContent = descr[Math.abs(j%5)];
 			// clearTimeout(myTimer);
 			// setTimeout(gotonext(1),5000);
