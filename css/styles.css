@@ -453,7 +453,8 @@ h2{
 }
 
 .title-page-2{
-	padding: 10px;
+	padding: 5px;
+	/*padding-bottom:px;*/
 	font-size: 3vw;
 	width: 14vw;
 	transform: rotate(0deg);
