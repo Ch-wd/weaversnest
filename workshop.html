@@ -14,10 +14,15 @@
 	<link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
 	<link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 
 </head>
 <body>
 	<div class = "main-page-container-2">
+		<div class = "background-texture">
+		
+		</div>
 		<div class = "header">
 		<div class = "nav-bar">
 			<ul class = "nav-list">
@@ -62,7 +67,9 @@
 		</div>
 		<div class = "course-container">
 			<div class = "course-title" onclick="expandCourseDescription(0)">
-				<h4>Basic Crochet Course - 10 days</h4>
+				<h4>Basic Crochet Course - 10 days <span class="material-symbols-outlined">expand_more</span></h4>
+				<!-- <img src="img/down-arrow.png"> -->
+
 			</div>
 			<div class = course-detail-container>
 				<div class = "course-detail">
@@ -89,7 +96,7 @@
 		</div>
 		<div class = "course-container">
 			<div class = "course-title" onclick="expandCourseDescription(1)">
-				<h4>Beginner's Crochet Course - 10 days</h4>
+				<h4>Beginner's Crochet Course - 10 days <span class="material-symbols-outlined">expand_more</span></h4>
 			</div>
 			<div class = course-detail-container>
 				<div class = "course-detail">
@@ -116,7 +123,7 @@
 		</div>
 		<div class = "course-container">
 			<div class = "course-title" onclick="expandCourseDescription(2)">
-				<h4>Advanced Crochet Course - 10 days</h4>
+				<h4>Advanced Crochet Course - 10 days <span class="material-symbols-outlined">expand_more</span></h4>
 			</div>
 			<div class = course-detail-container>
 				<div class = "course-detail">
@@ -143,7 +150,7 @@
 		</div>
 		<div class = "course-container">
 			<div class = "course-title" onclick="expandCourseDescription(3)">
-				<h4>Macrame Course - 10 days</h4>
+				<h4>Macrame Course - 10 days <span class="material-symbols-outlined">expand_more</span></h4>
 			</div>
 			<div class = course-detail-container>
 				<div class = "course-detail">
@@ -170,7 +177,7 @@
 		</div>
 		<div class = "course-container">
 			<div class = "course-title" onclick="expandCourseDescription(4)">
-				<h4>Tapestry Course - 10 days</h4>
+				<h4>Tapestry Course - 10 days <span class="material-symbols-outlined">expand_more</span></h4>
 			</div>
 			<div class = course-detail-container>
 				<div class = "course-detail">
@@ -226,6 +233,7 @@
 	<script src="js/commonscripts.js"></script>
 	<script type="text/javascript">
 		courseDetail = document.querySelectorAll(".course-detail-container");
+		arrows = document.querySelectorAll(".course-title span");
 		var i;
 		var courseVisible = [];
 		for(i=0; i<5;i++){
@@ -238,18 +246,23 @@
 					if(courseVisible[e] == 0){					
 						courseDetail[e].style.maxHeight = "800px";
 						courseDetail[e].style.paddingTop = "20px";
+						arrows[e].textContent = "expand_less";
 						courseVisible[e] = 1;
 						courseDetail[e].scrollIntoView(true);
+
 					}
 					else{
 						courseDetail[e].style.maxHeight = "0px";
 						courseDetail[e].style.paddingTop = "0px";
+						arrows[e].textContent = "expand_more";
+
 						courseVisible[e] = 0;
 					}
 				}
 				else{
 					courseDetail[i].style.maxHeight = "0px";
 					courseDetail[i].style.paddingTop = "0px";
+					arrows[i].textContent = "expand_more";
 					courseVisible[i] = 0;
 				}
 			}
