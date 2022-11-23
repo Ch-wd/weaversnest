@@ -453,8 +453,9 @@ h2{
 }
 
 .title-page-2{
+	padding: 10px;
 	font-size: 3vw;
-	width: 15vw;
+	width: 14vw;
 	transform: rotate(0deg);
 
 }
@@ -562,7 +563,7 @@ h2{
 	padding: 20px;
 	box-shadow: 0px 10px 2px 0px #eb9479;
 	/*margin-top: 10px;*/
-	margin-bottom: 9px;
+	margin-bottom: 8px;
 	/*box-sizing: border-box;*/
 }
 .course-title img{
@@ -701,6 +702,7 @@ h2{
 	padding-top: 15px;
 	color: var(--orange);
 	font-size: 1.5vw;
+	padding-right: 20px;
 }
 .mail::after{
 	width: 20%;
